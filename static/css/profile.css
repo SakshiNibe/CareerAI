@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ede9fe,
+        #fce7f3
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Container */
+
+.container {
+    width: 520px;
+    max-width: 90%;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    color: #312e81;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+
+    margin-top: 16px;
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-weight: bold;
+}
+
+
+/* Inputs */
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 5px rgba(99,102,241,0.3);
+}
+
+
+input[readonly] {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+
+/* Update Button */
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+
+button:hover {
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #6d28d9
+    );
+}
+
+
+/* Back Button */
+
+.back-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    padding: 11px 22px;
+
+    background: #0ea5e9;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.back-btn:hover {
+    background: #0284c7;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}

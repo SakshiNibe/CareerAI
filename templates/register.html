@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Registration</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <h1>CareerAI</h1>
+
+    <p class="subtitle">
+        Create your account and start your career journey
+    </p>
+
+
+    <form action="/save" method="POST">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Create a password"
+            required
+        >
+
+
+        <label>Mobile Number</label>
+
+        <input
+            type="tel"
+            name="mobile"
+            placeholder="Enter mobile number"
+            required
+        >
+
+
+        <label>Branch</label>
+
+        <select name="branch" required>
+
+            <option value="">Select Branch</option>
+
+            <option value="Computer Engineering">
+                Computer Engineering
+            </option>
+
+            <option value="Information Technology">
+                Information Technology
+            </option>
+
+            <option value="Electronics Engineering">
+                Electronics Engineering
+            </option>
+
+            <option value="Mechanical Engineering">
+                Mechanical Engineering
+            </option>
+
+            <option value="Civil Engineering">
+                Civil Engineering
+            </option>
+
+        </select>
+
+
+        <label>CGPA</label>
+
+        <input
+            type="number"
+            name="cgpa"
+            step="0.01"
+            min="0"
+            max="10"
+            placeholder="Enter CGPA"
+            required
+        >
+
+
+        <button type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+
+    <div class="login-link">
+
+        Already have an account?
+
+        <a href="/">
+            Login
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

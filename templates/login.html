@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Login</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="logo">
+        🎯
+    </div>
+
+    <h1>CareerAI</h1>
+
+    <p class="subtitle">
+        Smart Career Guidance & Placement Prediction
+    </p>
+
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="message">
+                    {{ message }}
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+
+    <form action="/login" method="POST">
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+
+    <div class="register-link">
+
+        Don't have an account?
+
+        <a href="/register">
+            Create Account
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

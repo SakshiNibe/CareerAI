@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0f2fe
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    padding-top: 25px;
+
+    background: linear-gradient(
+        180deg,
+        #312e81,
+        #4f46e5,
+        #7c3aed
+    );
+
+    box-shadow: 4px 0 15px rgba(0,0,0,0.15);
+}
+
+
+.sidebar h2 {
+    text-align: center;
+
+    color: white;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+
+.sidebar a {
+    display: block;
+
+    padding: 16px 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+
+    padding-left: 28px;
+}
+
+
+/* Main */
+
+.main {
+    margin-left: 240px;
+
+    padding: 40px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    background: white;
+
+    padding: 25px 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    margin-bottom: 30px;
+}
+
+
+.welcome h1 {
+    margin: 0;
+
+    color: #312e81;
+
+    font-size: 30px;
+}
+
+
+.welcome p {
+    color: #64748b;
+
+    margin-bottom: 0;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Card */
+
+.card {
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+
+    border-top: 5px solid;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.15);
+}
+
+
+.card .icon {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+.card h2 {
+    margin: 8px 0;
+
+    color: #1e293b;
+}
+
+
+.card p {
+    color: #64748b;
+
+    line-height: 1.6;
+
+    min-height: 50px;
+}
+
+
+.card a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* Individual Card Colors */
+
+.profile-card {
+    border-color: #3b82f6;
+}
+
+.profile-card a {
+    color: #2563eb;
+}
+
+
+.skills-card {
+    border-color: #10b981;
+}
+
+.skills-card a {
+    color: #059669;
+}
+
+
+.career-card {
+    border-color: #8b5cf6;
+}
+
+.career-card a {
+    color: #7c3aed;
+}
+
+
+.placement-card {
+    border-color: #f59e0b;
+}
+
+.placement-card a {
+    color: #d97706;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main {
+        margin-left: 190px;
+
+        padding: 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 10px;
+    }
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+}

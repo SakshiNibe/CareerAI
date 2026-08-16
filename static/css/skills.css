@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ede9fe,
+        #fce7f3
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 700px;
+    max-width: 92%;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    color: #312e81;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+
+/* Add Skill Form */
+
+.skill-form {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.skill-form input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.skill-form input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 5px rgba(99,102,241,0.3);
+}
+
+
+/* Add Button */
+
+.skill-form button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.skill-form button:hover {
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #6d28d9
+    );
+}
+
+
+/* Skills Section */
+
+.skills-section {
+    margin-top: 20px;
+}
+
+
+.skills-section h2 {
+    color: #4338ca;
+
+    margin-bottom: 15px;
+}
+
+
+/* Table */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+th {
+    padding: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    text-align: center;
+}
+
+
+td {
+    padding: 13px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #334155;
+}
+
+
+tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Skill Name */
+
+.skill-name {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    padding: 7px 12px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* Empty */
+
+.empty {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    border: 1px dashed #94a3b8;
+
+    border-radius: 10px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+
+.career-btn,
+.back-btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    margin: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.career-btn {
+    background: #10b981;
+}
+
+
+.career-btn:hover {
+    background: #059669;
+}
+
+
+.back-btn {
+    background: #2563eb;
+}
+
+
+.back-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .skill-form {
+        flex-direction: column;
+    }
+
+    .skill-form button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px 5px;
+    }
+
+    .career-btn,
+    .back-btn {
+        display: block;
+        margin: 10px 0;
+    }
+}

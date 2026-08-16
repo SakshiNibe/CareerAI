@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ede9fe,
+        #fce7f3
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 650px;
+    max-width: 90%;
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+h1 {
+    color: #312e81;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+
+/* Details */
+
+.details {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.info-card {
+    width: 200px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #e0e7ff
+    );
+
+    border: 1px solid #93c5fd;
+}
+
+
+.info-card h3 {
+    color: #1e40af;
+    margin-top: 0;
+}
+
+
+.value {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+
+/* Result Box */
+
+.result-box {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #fef3c7,
+        #fce7f3
+    );
+
+    border: 2px solid #f9a8d4;
+}
+
+
+.result-box h2 {
+    color: #4338ca;
+}
+
+
+/* Result */
+
+.result {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* Result Colors */
+
+.result.green {
+    background: #16a34a;
+}
+
+.result.orange {
+    background: #f59e0b;
+}
+
+.result.red {
+    background: #dc2626;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.back-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .result {
+        font-size: 20px;
+    }
+}

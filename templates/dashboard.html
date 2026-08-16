@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>CareerAI</h2>
+
+    <a href="/dashboard">🏠 Dashboard</a>
+
+    <a href="/profile">👤 Profile</a>
+
+    <a href="/skills">💡 My Skills</a>
+
+    <a href="/career">🎯 Career Guidance</a>
+
+    <a href="/placement">📊 Placement Prediction</a>
+
+    <a href="/logout">🚪 Logout</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="welcome">
+
+        <h1>Welcome, {{ name }} 👋</h1>
+
+        <p>
+            Your Smart Career Guidance & Placement Prediction System
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card profile-card">
+
+            <div class="icon">👤</div>
+
+            <h2>My Profile</h2>
+
+            <p>
+                View and update your personal and academic details.
+            </p>
+
+            <a href="/profile">
+                View Profile →
+            </a>
+
+        </div>
+
+
+        <div class="card skills-card">
+
+            <div class="icon">💡</div>
+
+            <h2>My Skills</h2>
+
+            <p>
+                Add and manage your technical skills.
+            </p>
+
+            <a href="/skills">
+                Manage Skills →
+            </a>
+
+        </div>
+
+
+        <div class="card career-card">
+
+            <div class="icon">🎯</div>
+
+            <h2>Career Guidance</h2>
+
+            <p>
+                Get a career recommendation based on your skills.
+            </p>
+
+            <a href="/career">
+                Explore Career →
+            </a>
+
+        </div>
+
+
+        <div class="card placement-card">
+
+            <div class="icon">📊</div>
+
+            <h2>Placement Prediction</h2>
+
+            <p>
+                Check your predicted placement chances.
+            </p>
+
+            <a href="/placement">
+                Check Prediction →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

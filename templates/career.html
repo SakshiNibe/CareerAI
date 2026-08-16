@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Career Guidance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/career.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎯 Career Guidance</h1>
+
+    <p class="subtitle">
+        Your career recommendation based on your skills
+    </p>
+
+
+    <!-- Recommendation -->
+
+    <div class="recommendation">
+
+        <div class="icon">
+            🚀
+        </div>
+
+        <h2>Recommended Career</h2>
+
+        <div class="career-result">
+            {{ career }}
+        </div>
+
+    </div>
+
+
+    <!-- Skills -->
+
+    <div class="skills-box">
+
+        <h2>💡 Your Skills</h2>
+
+        {% if skills %}
+
+        <div class="skill-list">
+
+            {% for skill in skills %}
+
+            <span class="skill">
+                {{ skill|title }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <p class="no-skills">
+            No skills added yet.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <a href="/skills" class="skills-btn">
+            💡 Manage Skills
+        </a>
+
+        <a href="/placement" class="placement-btn">
+            📊 Placement Prediction
+        </a>
+
+        <a href="/dashboard" class="dashboard-btn">
+            🏠 Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

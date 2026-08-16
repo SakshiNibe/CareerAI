@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ede9fe,
+        #fce7f3
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 650px;
+    max-width: 92%;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+h1 {
+    color: #312e81;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+
+/* Recommendation */
+
+.recommendation {
+    padding: 30px 20px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #ede9fe,
+        #dbeafe
+    );
+
+    border: 2px solid #c4b5fd;
+}
+
+
+.icon {
+    font-size: 50px;
+}
+
+
+.recommendation h2 {
+    color: #4338ca;
+
+    margin: 10px 0 15px;
+}
+
+
+/* Career Result */
+
+.career-result {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* Skills */
+
+.skills-box {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+.skills-box h2 {
+    color: #334155;
+
+    margin-top: 0;
+}
+
+
+/* Skill List */
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.skill {
+    padding: 8px 15px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+.no-skills {
+    color: #64748b;
+}
+
+
+/* Buttons */
+
+.buttons {
+    margin-top: 30px;
+}
+
+
+.buttons a {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    margin: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.skills-btn {
+    background: #10b981;
+}
+
+
+.skills-btn:hover {
+    background: #059669;
+}
+
+
+.placement-btn {
+    background: #f59e0b;
+}
+
+
+.placement-btn:hover {
+    background: #d97706;
+}
+
+
+.dashboard-btn {
+    background: #2563eb;
+}
+
+
+.dashboard-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 30px auto;
+
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .career-result {
+        font-size: 19px;
+    }
+
+    .buttons a {
+        display: block;
+
+        margin: 10px 0;
+    }
+}

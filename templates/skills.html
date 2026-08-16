@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - My Skills</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/skills.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💡 My Skills</h1>
+
+    <p class="subtitle">
+        Add your technical skills to get better career recommendations
+    </p>
+
+
+    <!-- Add Skill -->
+
+    <form action="/add_skill" method="POST" class="skill-form">
+
+        <input
+            type="text"
+            name="skill"
+            placeholder="Enter a skill (e.g. Python)"
+            required
+        >
+
+        <button type="submit">
+            + Add Skill
+        </button>
+
+    </form>
+
+
+    <!-- Skills Table -->
+
+    <div class="skills-section">
+
+        <h2>Your Skills</h2>
+
+        {% if skills %}
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Skill</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for skill in skills %}
+
+                <tr>
+
+                    <td>
+                        {{ loop.index }}
+                    </td>
+
+                    <td>
+                        <span class="skill-name">
+                            {{ skill[2]|title }}
+                        </span>
+                    </td>
+
+                    <td>
+                        <a
+                            href="/delete_skill/{{ skill[0] }}"
+                            class="delete-btn"
+                            onclick="return confirm('Delete this skill?')">
+                            Delete
+                        </a>
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        {% else %}
+
+        <div class="empty">
+            No skills added yet. Add your first skill above!
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <div class="buttons">
+
+        <a href="/career" class="career-btn">
+            🎯 Get Career Recommendation
+        </a>
+
+        <a href="/dashboard" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

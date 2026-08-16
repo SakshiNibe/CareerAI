@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👤 My Profile</h1>
+
+    <p class="subtitle">
+        Manage your academic and personal details
+    </p>
+
+
+    <form action="/update_profile" method="POST">
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            name="name"
+            value="{{ student[1] }}"
+            readonly
+        >
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            value="{{ student[2] }}"
+            readonly
+        >
+
+
+        <label>Mobile Number</label>
+
+        <input
+            type="text"
+            name="mobile"
+            value="{{ student[4] }}"
+            required
+        >
+
+
+        <label>Branch</label>
+
+        <input
+            type="text"
+            name="branch"
+            value="{{ student[5] }}"
+            required
+        >
+
+
+        <label>CGPA</label>
+
+        <input
+            type="number"
+            step="0.01"
+            min="0"
+            max="10"
+            name="cgpa"
+            value="{{ student[6] }}"
+            required
+        >
+
+
+        <button type="submit">
+            Update Profile
+        </button>
+
+    </form>
+
+
+    <a href="/dashboard" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>

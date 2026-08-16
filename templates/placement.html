@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - Placement Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/placement.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Placement Prediction</h1>
+
+    <p class="subtitle">
+        AI-based prediction of your placement chances
+    </p>
+
+
+    <div class="details">
+
+        <div class="info-card">
+            <h3>CGPA</h3>
+            <div class="value">
+                {{ cgpa }}
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <h3>Total Skills</h3>
+            <div class="value">
+                {{ skills }}
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="result-box">
+
+        <h2>Placement Prediction</h2>
+
+        <div class="result {{ color }}">
+            {{ result }}
+        </div>
+
+    </div>
+
+
+    <a href="/dashboard" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>

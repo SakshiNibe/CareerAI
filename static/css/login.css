@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed,
+        #ec4899
+    );
+}
+
+
+/* Login Box */
+
+.login-container {
+    width: 420px;
+    max-width: 90%;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+
+/* Logo */
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ede9fe;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+
+/* Heading */
+
+h1 {
+    margin: 5px 0;
+
+    font-size: 34px;
+
+    color: #4f46e5;
+}
+
+
+.subtitle {
+    color: #64748b;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+
+    text-align: left;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    color: #334155;
+
+    font-weight: bold;
+}
+
+
+/* Inputs */
+
+input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 5px rgba(99, 102, 241, 0.3);
+}
+
+
+/* Login Button */
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #6d28d9
+    );
+}
+
+
+/* Flash Message */
+
+.message {
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+
+/* Register */
+
+.register-link {
+    margin-top: 22px;
+
+    color: #64748b;
+}
+
+
+.register-link a {
+    color: #4f46e5;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+}
